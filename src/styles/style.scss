@@ -1,0 +1,81 @@
+@import 'fonts';
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Clear Sans';
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+.carriers {
+  height: 350px;
+  background: linear-gradient(39.22deg, #135CA9 8.66%, rgba(19, 92, 169, 0) 100%, rgba(19, 92, 169, 0.787786) 100%), url('../img/semi-trailers.png') 0 580px;
+  background-size: cover;
+  padding: 40px;
+  color: #FFFFFF;
+
+  &__header {
+    font-size: 2rem;
+  }
+}
+
+/**
+ * Tabs
+ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap; // make sure it wraps
+}
+.tabs label {
+  order: 1; // Put the labels first
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background: #90CAF9;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+.tabs .tab {
+  order: 99; // Put the tabs last
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  background: #fff;
+}
+.tabs input[type="radio"] {
+  display: none;
+}
+.tabs input[type="radio"]:checked + label {
+  background: #fff;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+
