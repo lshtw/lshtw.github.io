@@ -24,82 +24,62 @@
     </div>
     <div class="tabs">
         <input type="radio" name="tabs" id="tabone" checked="checked">
-        <label for="tabone">Перевозчики Pooling'a</label>
+        <label for="tabone" class="tabs__label">Перевозчики Pooling'a</label>
         <div class="tab">
-            <!--<div class="pooling-carriers">-->
-                <!--<header class="pooling-carriers__header">-->
-                <!--<span>Транспортная компания</span>-->
-                <!--<span>Название</span>-->
-                <!--<span>Перевозок за полгода</span>-->
-                <!--<span>Типы доставки</span>-->
-                <!--<span>Типы грузов</span>-->
-                <!--<span>Рейтинг</span>-->
-                <!--</header>-->
-                <!--<div class="pooling-carriers-list">-->
-                <!--<div class="pooling-carriers-list__item">-->
-                <!--<img src="img/фм.png" alt="FM Logistic">-->
-                <!--<span>FM logistic</span>-->
-                <!--<span>156</span>-->
-                <!--<span>FTL, LTL, Курьерская</span>-->
-                <!--<span>Food, Non-Food, Alco, Fresh, Freeze</span>-->
-                <!--<div class="ui rating" data-max-rating="5" data-rating="3"></div>-->
-                <!--</div>-->
-                <!--<div class="pooling-carriers-list__item"></div>-->
-                <!--<div class="pooling-carriers-list__item"></div>-->
-                <!--<div class="pooling-carriers-list__item"></div>-->
-                <!--</div>-->
-                <table class="pooling-carriers-table">
-                    <thead>
-                    <tr class="pooling-carriers-table__header">
-                        <th>Транспортная компания</th>
-                        <th>Название</th>
-                        <th>Перевозок за полгода</th>
-                        <th>Типы доставки</th>
-                        <th>Типы грузов</th>
-                        <th>Рейтинг</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="pooling-carriers-table__row">
-                        <td class="pooling-carriers-table__cell"><a href="fm.html" target="_self"><img src="img/фм.svg" alt="FM" class="pooling-carriers-table__icon"></a></td>
-                        <td class="pooling-carriers-table__cell">FM Logistic</td>
-                        <td class="pooling-carriers-table__cell">156</td>
-                        <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
-                        <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
-                        <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="4" data-max-rating="5"></div></td>
-                    </tr>
-                    <tr class="pooling-carriers-table__row">
-                        <td class="pooling-carriers-table__cell"><img src="img/лт.svg" alt="lt" class="pooling-carriers-table__icon"></td>
-                        <td class="pooling-carriers-table__cell">ЛТ Групп</td>
-                        <td class="pooling-carriers-table__cell">156</td>
-                        <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
-                        <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
-                        <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="3" data-max-rating="5"></div></td>
-                    </tr>
-                    <tr class="pooling-carriers-table__row">
-                        <td class="pooling-carriers-table__cell"><img src="img/итеко.svg" alt="iteco" class="pooling-carriers-table__icon"></td>
-                        <td class="pooling-carriers-table__cell">Итеко</td>
-                        <td class="pooling-carriers-table__cell">156</td>
-                        <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
-                        <td class="pooling-carriers-table__cell">Food, Non-Food</td>
-                        <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="3" data-max-rating="5"></div></td>
-                    </tr>
-                    <tr class="pooling-carriers-table__row">
-                        <td class="pooling-carriers-table__cell"><img src="img/агама.svg" alt="agama" class="pooling-carriers-table__icon"></td>
-                        <td class="pooling-carriers-table__cell">Агама</td>
-                        <td class="pooling-carriers-table__cell">123</td>
-                        <td class="pooling-carriers-table__cell">FTL, LTL</td>
-                        <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
-                        <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="2" data-max-rating="5"></div></td>
-                    </tr>
-                    </tbody>
-                </table>
+            <table class="pooling-carriers-table">
+                <thead>
+                <tr class="pooling-carriers-table__header">
+                    <th>Транспортная компания</th>
+                    <th>Название</th>
+                    <th>Перевозок за полгода</th>
+                    <th>Типы доставки</th>
+                    <th>Типы грузов</th>
+                    <th>Рейтинг</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="pooling-carriers-table__row" onclick="window.location.href = 'fm.html'">
+                    <td class="pooling-carriers-table__cell"><a href="fm.html" target="_self"><img src="img/фм.svg" alt="FM" class="pooling-carriers-table__icon"></a></td>
+                    <td class="pooling-carriers-table__cell">FM Logistic</td>
+                    <td class="pooling-carriers-table__cell">156</td>
+                    <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
+                    <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
+                    <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="4" data-max-rating="5"></div></td>
+                </tr>
+                <tr class="pooling-carriers-table__row">
+                    <td class="pooling-carriers-table__cell"><img src="img/лт.svg" alt="lt" class="pooling-carriers-table__icon"></td>
+                    <td class="pooling-carriers-table__cell">ЛТ Групп</td>
+                    <td class="pooling-carriers-table__cell">156</td>
+                    <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
+                    <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
+                    <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="3" data-max-rating="5"></div></td>
+                </tr>
+                <tr class="pooling-carriers-table__row">
+                    <td class="pooling-carriers-table__cell"><img src="img/итеко.svg" alt="iteco" class="pooling-carriers-table__icon"></td>
+                    <td class="pooling-carriers-table__cell">Итеко</td>
+                    <td class="pooling-carriers-table__cell">156</td>
+                    <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
+                    <td class="pooling-carriers-table__cell">Food, Non-Food</td>
+                    <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="3" data-max-rating="5"></div></td>
+                </tr>
+                <tr class="pooling-carriers-table__row">
+                    <td class="pooling-carriers-table__cell"><img src="img/агама.svg" alt="agama" class="pooling-carriers-table__icon"></td>
+                    <td class="pooling-carriers-table__cell">Агама</td>
+                    <td class="pooling-carriers-table__cell">123</td>
+                    <td class="pooling-carriers-table__cell">FTL, LTL</td>
+                    <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
+                    <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="2" data-max-rating="5"></div></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
 
         <input type="radio" name="tabs" id="tabtwo">
-        <label for="tabtwo">Мои перевозчики</label>
+        <label for="tabtwo" class="tabs__label">Мои перевозчики</label>
         <div class="tab">
-           <p>Добавляйте перевозчиков, с которыми вы работаете, и оформляйте все свои доставки через Pooling.</p>
+            <div class="my-carriers">
+                <p class="my-carriers__text">Добавляйте перевозчиков, с которыми вы работаете, и оформляйте все свои доставки через Pooling.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -122,13 +102,13 @@
             <div class="field join-carriers-form__field">
                 <label class="join-carriers-form__label">Телефон</label>
                 <div class="ui input">
-                    <input type="text" placeholder="+7 (912) 345-67-89">
+                    <input type="tel" placeholder="+7 (912) 345-67-89">
                 </div>
             </div>
             <div class="field join-carriers-form__field">
                 <label class="join-carriers-form__label">E-mail</label>
                 <div class="ui input">
-                    <input type="text" placeholder="name@domain.ru">
+                    <input type="email" placeholder="name@domain.ru">
                 </div>
             </div>
             <div class="field join-carriers-form__field">
