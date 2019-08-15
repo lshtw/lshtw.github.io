@@ -36,5 +36,9 @@
     "webpack": "v4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "apexcharts": "^3.8.4",
+    "semantic-ui": "^2.4.2"
   }
 }

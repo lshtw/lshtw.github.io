@@ -17,14 +17,18 @@ var path = {
         js: 'build/js/',
         css: 'build/styles/',
         img: 'build/img/',
-        fonts: 'build/fonts/'
+        fonts: 'build/fonts/',
+        semantic: 'build/semantic',
+        docs: 'build/docs'
     },
     src: {
         html: 'src/*.html',
         js: 'src/scripts/*.js',
         style: 'src/styles/style.scss',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        semantic: 'semantic/**',
+        docs: 'src/docs/**'
     },
     watch: {
         html: 'src/**/*.html',
@@ -80,13 +84,18 @@ gulp.task('fonts-build', function() {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
 });
+gulp.task('move', function () {
+    gulp.src(path.src.semantic).pipe(gulp.dest(path.build.semantic));
+    gulp.src(path.src.docs).pipe(gulp.dest(path.build.docs));
+});
 
 gulp.task('build', [
     'html-build',
     'js-build',
     'style-build',
     'image-build',
-    'fonts-build'
+    'fonts-build',
+    'move'
 ]);
 
 gulp.task('watch', function(){
