@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pooling</title>
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+</head>
+<body>
+<header style="height: 60px; background-color: darkseagreen"></header>
+<div class="container ">
+    <div class="carriers">
+        <span class="carriers__header">Перевозчики</span>
+        <div>
+            <button class="carriers__join-button">Подключиться как перевозчик</button>
+            <a href="work-conditions.html" target="_self" class="carriers__conditions">Условия работы</a>
+        </div>
+    </div>
+    <div class="tabs">
+        <input type="radio" name="tabs" id="tabone" checked="checked">
+        <label for="tabone" class="tabs__label">Перевозчики Pooling'a</label>
+        <div class="tab">
+                <table class="pooling-carriers-table">
+                    <thead>
+                    <tr class="pooling-carriers-table__header">
+                        <th>Транспортная компания</th>
+                        <th>Название</th>
+                        <th>Перевозок за полгода</th>
+                        <th>Типы доставки</th>
+                        <th>Типы грузов</th>
+                        <th>Рейтинг</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="pooling-carriers-table__row" onclick="window.location.href = 'fm.html'">
+                        <td class="pooling-carriers-table__cell"><a href="fm.html" target="_self"><img src="img/фм.svg" alt="FM" class="pooling-carriers-table__icon"></a></td>
+                        <td class="pooling-carriers-table__cell">FM Logistic</td>
+                        <td class="pooling-carriers-table__cell">156</td>
+                        <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
+                        <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
+                        <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="4" data-max-rating="5"></div></td>
+                    </tr>
+                    <tr class="pooling-carriers-table__row">
+                        <td class="pooling-carriers-table__cell"><img src="img/лт.svg" alt="lt" class="pooling-carriers-table__icon"></td>
+                        <td class="pooling-carriers-table__cell">ЛТ Групп</td>
+                        <td class="pooling-carriers-table__cell">156</td>
+                        <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
+                        <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
+                        <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="3" data-max-rating="5"></div></td>
+                    </tr>
+                    <tr class="pooling-carriers-table__row">
+                        <td class="pooling-carriers-table__cell"><img src="img/итеко.svg" alt="iteco" class="pooling-carriers-table__icon"></td>
+                        <td class="pooling-carriers-table__cell">Итеко</td>
+                        <td class="pooling-carriers-table__cell">156</td>
+                        <td class="pooling-carriers-table__cell">FTL, LTL, Курьерская</td>
+                        <td class="pooling-carriers-table__cell">Food, Non-Food</td>
+                        <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="3" data-max-rating="5"></div></td>
+                    </tr>
+                    <tr class="pooling-carriers-table__row">
+                        <td class="pooling-carriers-table__cell"><img src="img/агама.svg" alt="agama" class="pooling-carriers-table__icon"></td>
+                        <td class="pooling-carriers-table__cell">Агама</td>
+                        <td class="pooling-carriers-table__cell">123</td>
+                        <td class="pooling-carriers-table__cell">FTL, LTL</td>
+                        <td class="pooling-carriers-table__cell">Food, Non-Food, Alco, Fresh, Freeze</td>
+                        <td class="pooling-carriers-table__cell"><div class="ui rating" data-rating="2" data-max-rating="5"></div></td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+
+        <input type="radio" name="tabs" id="tabtwo">
+        <label for="tabtwo" class="tabs__label">Мои перевозчики</label>
+        <div class="tab">
+            <div class="my-carriers">
+                <p class="my-carriers__text">Добавляйте перевозчиков, с которыми вы работаете, и оформляйте все свои доставки через Pooling.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui basic modal join-carriers-modal">
+    <p class="join-carriers-modal__header">Оставьте свои данные и мы свяжемся с вами, чтобы подключить вас к площадке</p>
+    <div class="">
+        <form class="join-carriers-form">
+            <div class="field join-carriers-form__field">
+                <label class="join-carriers-form__label">Ваше имя</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Введите имя">
+                </div>
+            </div>
+            <div class="field join-carriers-form__field">
+                <label class="join-carriers-form__label">Компания</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Введите название компании">
+                </div>
+            </div>
+            <div class="field join-carriers-form__field">
+                <label class="join-carriers-form__label">Телефон</label>
+                <div class="ui input">
+                    <input type="tel" placeholder="+7 (912) 345-67-89">
+                </div>
+            </div>
+            <div class="field join-carriers-form__field">
+                <label class="join-carriers-form__label">E-mail</label>
+                <div class="ui input">
+                    <input type="email" placeholder="name@domain.ru">
+                </div>
+            </div>
+            <div class="field join-carriers-form__field">
+                <div class="ui input">
+                    <input type="submit" class="join-carriers-form__submit" value="Подключиться">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

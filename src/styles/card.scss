@@ -1,0 +1,297 @@
+.about-company {
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin: 0 auto;
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &-card {
+    background: #F0F5F8;
+    width: 324px;
+    padding: 20px 30px 30px;
+    border-radius: 8px;
+    margin-right: 20px;
+
+    & div {
+      margin-bottom: 20px;
+    }
+
+    &__name {
+      color: #000000;
+      font-size: 18px;
+    }
+    &__transportation-count {
+      color: #135CA9;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__types {
+      color: #000000;
+      font-size: 1rem;
+    }
+  }
+
+  &__description {
+    max-width: 840px;
+    padding: 0 10px 0 0;
+    text-align: left;
+    color: #000000;
+  }
+
+}
+
+.link_return {
+  color: #475566;
+  border-bottom: 1px dashed #475566;
+}
+
+.documents {
+  text-align: center;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: max-content;
+    margin: 0 auto 40px;
+
+    &-item {
+      margin-bottom: 20px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    &-icon {
+      vertical-align: middle;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    color: #135CA9;
+    text-decoration: underline;
+
+  }
+}
+
+.statistic {
+  padding: 40px 0;
+
+  &__diagrams {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__diagram {
+    background-color: #FFFFFF;
+    width: 50%;
+    max-width: 580px;
+    padding: 30px 40px 40px;
+
+    &-icon {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.apexcharts-title-text {
+  font-weight: bold;
+}
+
+.divider {
+  width: 200px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #C4D6E9;
+}
+.join-carriers-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  &__label {
+    color: #000000;
+  }
+
+  &__field {
+    max-width: 50%;
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    &:nth-child(even) {
+      margin-left: 30px;
+    }
+
+    &:last-of-type {
+      margin-top: 20px;
+    }
+  }
+
+  &__submit {
+    text-align: center !important;
+    border: 1px solid #135CA9 !important;
+  }
+}
+
+.comments {
+  padding: 40px 0;
+  &__slider {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 50px 20px 20px;
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+
+    & .slick-arrow {
+      height: 40px;
+    }
+
+    & .slick-prev {
+      left: -40px;
+    }
+    & .slick-next {
+      right: -40px;
+    }
+    & .slick-dots {
+      position: static;
+    }
+    &.slick-dotted.slick-slider {
+      margin-bottom: 40px;
+    }
+
+    & .slick-dots li button:before {
+      color: #C4D6E9;
+      opacity: 1;
+      font-size: 8px;
+    }
+    & .slick-dots li.slick-active button:before {
+      color: #135CA9 !important;
+      font-size: 8px;
+      opacity: 1;
+    }
+  }
+
+  &__author {
+    display: block;
+    font-weight: bolder;
+  }
+
+
+
+  &__add-button {
+    border: 1px solid #135CA9;
+    background: #FFFFFF;
+    border-radius: 1.35rem;
+    flex: 1 0 auto;
+    outline: none;
+    padding: 0.67857143em 1em;
+    color: #000000;
+    font-size: 1rem;
+    margin: 0 auto;
+    display: block;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+    &:focus {
+      border-color: #135CA9;
+      background: #FFFFFF;
+      color: rgba(0, 0, 0, 0.8);
+      box-shadow: none;
+    }
+  }
+}
+
+
+.slick-dots li button:before {
+  color: #135CA9
+}
+.ui.basic.modal {
+  background-color: #FFFFFF;
+}
+.add-comments-modal {
+  padding: 40px 75px;
+}
+.add-comments-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__field {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+    & .input {
+      width: 100%;
+    }
+  }
+
+  &__submit {
+    border: 1px solid #135CA9;
+    background: #FFF;
+    border-radius: 1.35rem;
+    flex: 1 0 auto;
+    outline: 0;
+    padding: .67857143em 1em;
+    color: #000;
+    font-size: 1rem;
+    margin: 0 auto;
+    display: block;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+  }
+}
+
+.contract-request {
+  display: flex;
+  justify-content: space-between;
+
+  &-form {
+    width: 100%;
+    max-width: 660px;
+    border: 1px solid #C4D6E9;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 40px;
+
+    &__header {
+      letter-spacing: -0.5px;
+    }
+
+    &__fields {
+      padding: 0 20px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__submit {
+      border: 1px solid #135CA9;
+      background: #FFF;
+      border-radius: 1.35rem;
+      flex: 1 0 auto;
+      outline: 0;
+      padding: .67857143em 1em;
+      color: #000;
+      font-size: 1rem;
+      margin: 0 auto;
+      display: block;
+      -webkit-tap-highlight-color: rgba(255,255,255,0);
+    }
+  }
+}

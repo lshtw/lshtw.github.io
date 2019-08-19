@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pooling</title>
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="../semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6e6ba854-3acd-4a69-82a1-c66350adfa9a&lang=ru_RU"
+            type="text/javascript">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map("YMapsID", {
+                center: [55.76, 37.64],
+                zoom: 10
+            });
+
+            myMap.geoObjects.add(new ymaps.Placemark([55.684758, 37.738521], {
+                balloonContent: '<strong>Склад</strong><p>Адрес склада</p>'
+            }, {
+                preset: 'islands#icon',
+                iconColor: '#0095b6'
+            }))
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+<header style="height: 60px; background-color: darkseagreen"></header>
+<div class="container">
+    <div class="about-company">
+        <header class="about-company__header">
+            <a class="link_return" onclick="window.location.href='index.html'">К списку перевозчиков</a>
+            <img src="img/фм.svg" alt="FM" height="40px" width="200px" class="about-company__logo">
+        </header>
+        <h2 class="head-text">О компании</h2>
+        <div class="about-company__info">
+            <div class="about-company-card">
+                <div class="about-company-card__name card_item"><strong>FM Logistic</strong></div>
+                <div class="ui rating card_item" data-rating="4" data-max-rating="5"></div>
+                <div>
+                    <span class="about-company-card__transportation-count">156</span>
+                    <p>перевозок за полгода</p>
+                </div>
+                <div class="card_item">
+                    <strong>FTL, LTL, Курьерская</strong>
+                    <p>типы доставок</p>
+                </div>
+                <div class="card_item">
+                    <strong>Food, Non-Food, Alco, Fresh, Freeze</strong>
+                    <p>типы грузов</p>
+                </div>
+            </div>
+            <div class="about-company__description">
+                <p>
+                    FM Logistic – один из лидеров российского логистического рынка. Компания предоставляет полный
+                    комплекс услуг по управлению цепочкой поставок, таких как складирование, перевозки всеми видами
+                    транспорта, упаковка и расфасовка, таможенное оформление. На сегодняшний день группа FM Logistic
+                    располагает международной сетью собственных складских комплексов в 14 странах мира.
+                </p>
+                <p>Год основания — <b>1994</b></p>
+                <p>Количество машин — <b>500</b></p>
+                <p>Количество сотрудников — <b>8 000</b></p>
+                <p>Выручка за 2018 год — <b>18 млрд. ₽</b></p>
+                <p>Собственных складов — <b>27</b></p>
+                <p>Складов в аренде — <b>30</b></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg">
+    <div class="container statistic">
+        <h2 class="head-text">Статистика</h2>
+        <div class="statistic__diagrams">
+            <div class="statistic__diagram growth-dynamics">
+                <h3 class="text-center">Динамика роста перевозок</h3>
+                <div class="growth-dynamics__diagram"></div>
+            </div>
+            <div class="statistic__diagram timely-delivery">
+                <h3 class="text-center">Показатели своевременности доставки за июль</h3>
+                <img src="img/magnit.svg" alt="magnit" class="statistic__diagram-icon">
+                <div class="timely-delivery__diagram"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container stock-address">
+    <div id="YMapsID" style="width: 100%; height: 350px;"></div>
+</div>
+<div class="bg">
+    <div class="container comments">
+        <h2 class="comment__header head-text text-center">Отзывы о FM Logistic</h2>
+        <div class="comments__slider">
+            <div class="comments__slide">
+                <p class="comments__text">FM Logistic – один из лидеров российского логистического рынка. Компания
+                    предоставляет полный
+                    комплекс услуг по управлению цепочкой поставок, таких как складирование, перевозки всеми видами
+                    транспорта, упаковка и расфасовка, таможенное оформление. На сегодняшний день группа FM Logistic
+                    располагает международной сетью собственных складских комплексов в 14 странах мира.
+                </p>
+                <div class="comments__sign">
+                    <span class="comments__author">Иванов Иван Иванович</span>
+                    <span>руководитель отдела ООО "Ромашка"</span>
+                </div>
+            </div>
+            <div class="comments__slide">
+                <p class="comments__text">FM Logistic – один из лидеров российского логистического рынка. Компания
+                    предоставляет полный
+                    комплекс услуг по управлению цепочкой поставок, таких как складирование, перевозки всеми видами
+                    транспорта, упаковка и расфасовка, таможенное оформление. На сегодняшний день группа FM Logistic
+                    располагает международной сетью собственных складских комплексов в 14 странах мира.
+                </p>
+                <div class="comments__sign">
+                    <span class="comments__author">Иванов Иван Иванович</span>
+                    <span>руководитель отдела ООО "Ромашка"</span>
+                </div>
+            </div>
+        </div>
+        <button class="comments__add-button">Добавить отзыв</button>
+    </div>
+</div>
+<div class="container documents">
+    <h2 class="head-text">Документы</h2>
+    <div class="documents__list">
+        <div class="documents__list-item">
+            <img src="img/doc.svg" alt="doc" class="documents__list-icon">
+            <span>Договор (<a download href="docs/doc.docx" class="documents__link">скачать</a>.docx)</span>
+        </div>
+        <div class="documents__list-item">
+            <img src="img/doc.svg" alt="doc" class="documents__list-icon">
+            <span>Соглашение (<a download href="docs/doc.docx" class="documents__link">скачать</a>.pdf)</span>
+        </div>
+    </div>
+    <div class="divider"></div>
+</div>
+<div class="container contract-request">
+        <form class="contract-request-form">
+            <h2 class="contract-request-form__header head-text">Оставить заявку на заключение договора с FM Logistic</h2>
+            <div class="contract-request-form__fields">
+            <div class="field form-field contract-request-form__field">
+                <label class="join-carriers-form__label">Ваше имя</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Введите имя">
+                </div>
+            </div>
+            <div class="field form-field contract-request-form__field">
+                <label class="join-carriers-form__label">Компания</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Введите название компании">
+                </div>
+            </div>
+            <div class="field form-field contract-request-form__field">
+                <label class="join-carriers-form__label">Телефон</label>
+                <div class="ui input">
+                    <input type="tel" placeholder="+7 (912) 345-67-89">
+                </div>
+            </div>
+            <div class="field form-field contract-request-form__field">
+                <label class="join-carriers-form__label">E-mail</label>
+                <div class="ui input">
+                    <input type="email" placeholder="name@domain.ru">
+                </div>
+            </div>
+            </div>
+            <button type="submit" class="form-field contract-request-form__submit">Отправить отзыв</button>
+        </form>
+    <div class="carriers carriers_small">
+        <button class="carriers__join-button">Подключиться как перевозчик</button>
+        <a href="work-conditions.html" target="_self" class="carriers__conditions">Условия работы</a>
+    </div>
+</div>
+<div class="ui basic modal add-comments-modal">
+    <p class="join-carriers-modal__header">Отзыв о <span>FM Logistic</span></p>
+    <div class="">
+        <form class="add-comments-form">
+            <div class="field add-comments-form__field">
+                <label class="join-carriers-form__label">Ваше имя</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Введите ваше имя">
+                </div>
+            </div>
+            <div class="field add-comments-form__field">
+                <label class="join-carriers-form__label">Компания и должность</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Введите название компании и вашу должность">
+                </div>
+            </div>
+            <div class="field add-comments-form__field">
+                <label class="join-carriers-form__label">Отзыв</label>
+                <div class="ui input">
+                    <textarea name="" placeholder="Введите ваш отзыв о FM Logistic"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="add-comments-form__submit">Отправить отзыв</button>
+        </form>
+    </div>
+</div>
+<div class="ui basic modal join-carriers-modal">
+    <p class="join-carriers-modal__header">Оставьте свои данные и мы свяжемся с вами, чтобы подключить вас к площадке</p>
+    <div class="">
+        <form class="join-carriers-form">
+            <div class="field join-carriers-form__field">
+                <label class="join-carriers-form__label">Ваше имя</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Введите имя">
+                </div>
+            </div>
+            <div class="field join-carriers-form__field">
+                <label class="join-carriers-form__label">Компания</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Введите название компании">
+                </div>
+            </div>
+            <div class="field join-carriers-form__field">
+                <label class="join-carriers-form__label">Телефон</label>
+                <div class="ui input">
+                    <input type="tel" placeholder="+7 (912) 345-67-89">
+                </div>
+            </div>
+            <div class="field join-carriers-form__field">
+                <label class="join-carriers-form__label">E-mail</label>
+                <div class="ui input">
+                    <input type="email" placeholder="name@domain.ru">
+                </div>
+            </div>
+            <div class="field join-carriers-form__field">
+                <div class="ui input">
+                    <input type="submit" class="join-carriers-form__submit" value="Подключиться">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="js/diagram.js" type="module"></script>
+<script src="js/main.js" type="module"></script>
+<script>
+    $('.comments__slider').slick({
+        prevArrow: '<img src="img/arrow_left.svg" class="slick-prev">',
+        nextArrow: '<img src="img/arrow_right.svg" class="slick-next">',
+        dots: true
+    });
+</script>
+</body>
+</html>
